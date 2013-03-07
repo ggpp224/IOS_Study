@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841848D216DDE65000471853 /* GPWeiboInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841848D116DDE65000471853 /* GPWeiboInfoViewController.m */; };
 		8440B88416DB434D006D58D4 /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B88316DB434D006D58D4 /* GPHttpClient.m */; };
 		8440B8B316DC66B4006D58D4 /* GPSinaWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B8B216DC66B4006D58D4 /* GPSinaWeiboViewController.m */; };
 		8440B8C116DC801E006D58D4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B8B716DC801E006D58D4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -30,10 +31,11 @@
 		84B26E1416D5F509002D1792 /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1316D5F509002D1792 /* GPViewController.m */; };
 		84B26E1716D5F8E8002D1792 /* GPStaticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */; };
 		84B26E1A16D60AF7002D1792 /* GPGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */; };
-		84CB297516DDCD1000B03ECD /* GPtestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CB297416DDCD1000B03ECD /* GPtestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841848D016DDE65000471853 /* GPWeiboInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWeiboInfoViewController.h; sourceTree = "<group>"; };
+		841848D116DDE65000471853 /* GPWeiboInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWeiboInfoViewController.m; sourceTree = "<group>"; };
 		8440B88216DB434D006D58D4 /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
 		8440B88316DB434D006D58D4 /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
 		8440B8B116DC66B4006D58D4 /* GPSinaWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSinaWeiboViewController.h; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStaticViewController.m; sourceTree = "<group>"; };
 		84B26E1816D60AF7002D1792 /* GPGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGroupTableViewController.h; sourceTree = "<group>"; };
 		84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGroupTableViewController.m; sourceTree = "<group>"; };
-		84CB297316DDCD1000B03ECD /* GPtestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPtestViewController.h; sourceTree = "<group>"; };
-		84CB297416DDCD1000B03ECD /* GPtestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPtestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,8 @@
 				844F71E316D738EA00BBEFDD /* GPHttpViewController.m */,
 				8440B8B116DC66B4006D58D4 /* GPSinaWeiboViewController.h */,
 				8440B8B216DC66B4006D58D4 /* GPSinaWeiboViewController.m */,
-				84CB297316DDCD1000B03ECD /* GPtestViewController.h */,
-				84CB297416DDCD1000B03ECD /* GPtestViewController.m */,
+				841848D016DDE65000471853 /* GPWeiboInfoViewController.h */,
+				841848D116DDE65000471853 /* GPWeiboInfoViewController.m */,
 			);
 			path = IOS_Study;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				8440B8C316DC801E006D58D4 /* SinaWeibo.m in Sources */,
 				8440B8C416DC801E006D58D4 /* SinaWeiboAuthorizeView.m in Sources */,
 				8440B8C516DC801E006D58D4 /* SinaWeiboRequest.m in Sources */,
-				84CB297516DDCD1000B03ECD /* GPtestViewController.m in Sources */,
+				841848D216DDE65000471853 /* GPWeiboInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

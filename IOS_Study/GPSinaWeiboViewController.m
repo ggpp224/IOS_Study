@@ -7,6 +7,7 @@
 //
 
 #import "GPSinaWeiboViewController.h"
+#import "GPWeiboInfoViewController.h"
 
 @interface GPSinaWeiboViewController ()
 
@@ -183,29 +184,7 @@
     {
         userInfo = nil;
     }
-    else if ([request.url hasSuffix:@"statuses/user_timeline.json"])
-    {
-        statuses = nil;
-    }
-    else if ([request.url hasSuffix:@"statuses/update.json"])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                            message:[NSString stringWithFormat:@"Post status \"%@\" failed!", postStatusText]
-                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];
-        
-        
-        NSLog(@"Post status failed with error : %@", error);
-    }
-    else if ([request.url hasSuffix:@"statuses/upload.json"])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                            message:[NSString stringWithFormat:@"Post image status \"%@\" failed!", postImageStatusText]
-                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];
-        
-        NSLog(@"Post image status failed with error : %@", error);
-    }
+    
     
     
     [self resetButtons];
@@ -219,33 +198,12 @@
         NSDictionary *dict = [arr objectAtIndex:0];
         
         NSLog(@"返回数据：%@",[dict objectForKey:@"source"]);
-    }
-    else if ([request.url hasSuffix:@"statuses/user_timeline.json"])
-    {
-      
-        statuses = [result objectForKey:@"statuses"];
-    }
-    else if ([request.url hasSuffix:@"statuses/update.json"])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                            message:[NSString stringWithFormat:@"Post status \"%@\" succeed!", [result objectForKey:@"text"]]
-                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];
+        GPWeiboInfoViewController *weiboInfoController = [[GPWeiboInfoViewController alloc] init];
+        weiboInfoController.weiboInfo = result;
         
-        
-         postStatusText = nil;
+        [self.navigationController pushViewController:weiboInfoController animated:YES];
     }
-    else if ([request.url hasSuffix:@"statuses/upload.json"])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
-                                                            message:[NSString stringWithFormat:@"Post image status \"%@\" succeed!", [result objectForKey:@"text"]]
-                                                           delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alertView show];
         
-        
-        postImageStatusText = nil;
-    }
-    
     [self resetButtons];
 }
 @end
