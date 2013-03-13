@@ -146,8 +146,7 @@
 
 - (void)sinaweiboDidLogIn:(SinaWeibo *)sinaweibo
 {
-    NSLog(@"sinaweiboDidLogIn userID = %@ accesstoken = %@ expirationDate = %@ refresh_token = %@", sinaweibo.userID, sinaweibo.accessToken, sinaweibo.expirationDate,sinaweibo.refreshToken);
-    
+       
     [self resetButtons];
     [self storeAuthData];
 }

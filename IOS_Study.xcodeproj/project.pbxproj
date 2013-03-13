@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		841848D216DDE65000471853 /* GPWeiboInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841848D116DDE65000471853 /* GPWeiboInfoViewController.m */; };
+		843FD47C16E85DD9009FA8EF /* GPVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843FD47B16E85DD9009FA8EF /* GPVideoViewController.m */; };
+		843FD47E16E85F17009FA8EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FD47D16E85F17009FA8EF /* AVFoundation.framework */; };
+		843FD48016E85F2B009FA8EF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843FD47F16E85F2B009FA8EF /* MediaPlayer.framework */; };
 		8440B88416DB434D006D58D4 /* GPHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B88316DB434D006D58D4 /* GPHttpClient.m */; };
 		8440B8B316DC66B4006D58D4 /* GPSinaWeiboViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B8B216DC66B4006D58D4 /* GPSinaWeiboViewController.m */; };
 		8440B8C116DC801E006D58D4 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440B8B716DC801E006D58D4 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -22,6 +25,7 @@
 		8440B8D116DC8D8C006D58D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8440B8CB16DC8D8C006D58D4 /* logo.png */; };
 		8440B8D216DC8D8C006D58D4 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8440B8CC16DC8D8C006D58D4 /* logo@2x.png */; };
 		844F71E416D738EA00BBEFDD /* GPHttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F71E316D738EA00BBEFDD /* GPHttpViewController.m */; };
+		847B68BF16EEF0FE007376A9 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 847B68BE16EEF0FE007376A9 /* www */; };
 		84B26DF816D5F2A7002D1792 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF716D5F2A7002D1792 /* UIKit.framework */; };
 		84B26DFA16D5F2A7002D1792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF916D5F2A7002D1792 /* Foundation.framework */; };
 		84B26DFC16D5F2A7002D1792 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DFB16D5F2A7002D1792 /* CoreGraphics.framework */; };
@@ -31,11 +35,18 @@
 		84B26E1416D5F509002D1792 /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1316D5F509002D1792 /* GPViewController.m */; };
 		84B26E1716D5F8E8002D1792 /* GPStaticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */; };
 		84B26E1A16D60AF7002D1792 /* GPGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */; };
+		84FE176516EDA2B0003841C3 /* GPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FE176416EDA2B0003841C3 /* GPWebViewController.m */; };
+		84FE177016EDACC8003841C3 /* GPWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		841848D016DDE65000471853 /* GPWeiboInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWeiboInfoViewController.h; sourceTree = "<group>"; };
 		841848D116DDE65000471853 /* GPWeiboInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWeiboInfoViewController.m; sourceTree = "<group>"; };
+		843FD47816E85D50009FA8EF /* sample_iPod.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample_iPod.m4v; sourceTree = "<group>"; };
+		843FD47A16E85DD9009FA8EF /* GPVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVideoViewController.h; sourceTree = "<group>"; };
+		843FD47B16E85DD9009FA8EF /* GPVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVideoViewController.m; sourceTree = "<group>"; };
+		843FD47D16E85F17009FA8EF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		843FD47F16E85F2B009FA8EF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8440B88216DB434D006D58D4 /* GPHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpClient.h; sourceTree = "<group>"; };
 		8440B88316DB434D006D58D4 /* GPHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpClient.m; sourceTree = "<group>"; };
 		8440B8B116DC66B4006D58D4 /* GPSinaWeiboViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSinaWeiboViewController.h; sourceTree = "<group>"; };
@@ -58,6 +69,7 @@
 		8440B8CC16DC8D8C006D58D4 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		844F71E216D738EA00BBEFDD /* GPHttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpViewController.h; sourceTree = "<group>"; };
 		844F71E316D738EA00BBEFDD /* GPHttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpViewController.m; sourceTree = "<group>"; };
+		847B68BE16EEF0FE007376A9 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		84B26DF316D5F2A7002D1792 /* IOS_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B26DF716D5F2A7002D1792 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84B26DF916D5F2A7002D1792 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,6 +86,10 @@
 		84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStaticViewController.m; sourceTree = "<group>"; };
 		84B26E1816D60AF7002D1792 /* GPGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGroupTableViewController.h; sourceTree = "<group>"; };
 		84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGroupTableViewController.m; sourceTree = "<group>"; };
+		84FE176316EDA2B0003841C3 /* GPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewController.h; sourceTree = "<group>"; };
+		84FE176416EDA2B0003841C3 /* GPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWebViewController.m; sourceTree = "<group>"; };
+		84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewDelegate.h; sourceTree = "<group>"; };
+		84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWebViewDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843FD48016E85F2B009FA8EF /* MediaPlayer.framework in Frameworks */,
+				843FD47E16E85F17009FA8EF /* AVFoundation.framework in Frameworks */,
 				84B26DF816D5F2A7002D1792 /* UIKit.framework in Frameworks */,
 				84B26DFA16D5F2A7002D1792 /* Foundation.framework in Frameworks */,
 				84B26DFC16D5F2A7002D1792 /* CoreGraphics.framework in Frameworks */,
@@ -135,6 +153,7 @@
 		8440B8C616DC8D8C006D58D4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				843FD47816E85D50009FA8EF /* sample_iPod.m4v */,
 				8440B8C716DC8D8C006D58D4 /* button_background.png */,
 				8440B8C816DC8D8C006D58D4 /* button_background@2x.png */,
 				8440B8C916DC8D8C006D58D4 /* button_background_disabled.png */,
@@ -148,6 +167,7 @@
 		84B26DE816D5F2A7002D1792 = {
 			isa = PBXGroup;
 			children = (
+				847B68BE16EEF0FE007376A9 /* www */,
 				8440B8C616DC8D8C006D58D4 /* Resources */,
 				84B26DFD16D5F2A7002D1792 /* IOS_Study */,
 				84B26DF616D5F2A7002D1792 /* Frameworks */,
@@ -166,6 +186,8 @@
 		84B26DF616D5F2A7002D1792 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				843FD47D16E85F17009FA8EF /* AVFoundation.framework */,
+				843FD47F16E85F2B009FA8EF /* MediaPlayer.framework */,
 				84B26DF716D5F2A7002D1792 /* UIKit.framework */,
 				84B26DF916D5F2A7002D1792 /* Foundation.framework */,
 				84B26DFB16D5F2A7002D1792 /* CoreGraphics.framework */,
@@ -193,6 +215,12 @@
 				8440B8B216DC66B4006D58D4 /* GPSinaWeiboViewController.m */,
 				841848D016DDE65000471853 /* GPWeiboInfoViewController.h */,
 				841848D116DDE65000471853 /* GPWeiboInfoViewController.m */,
+				843FD47A16E85DD9009FA8EF /* GPVideoViewController.h */,
+				843FD47B16E85DD9009FA8EF /* GPVideoViewController.m */,
+				84FE176316EDA2B0003841C3 /* GPWebViewController.h */,
+				84FE176416EDA2B0003841C3 /* GPWebViewController.m */,
+				84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */,
+				84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */,
 			);
 			path = IOS_Study;
 			sourceTree = "<group>";
@@ -267,6 +295,7 @@
 				8440B8D016DC8D8C006D58D4 /* button_background_disabled@2x.png in Resources */,
 				8440B8D116DC8D8C006D58D4 /* logo.png in Resources */,
 				8440B8D216DC8D8C006D58D4 /* logo@2x.png in Resources */,
+				847B68BF16EEF0FE007376A9 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +319,9 @@
 				8440B8C416DC801E006D58D4 /* SinaWeiboAuthorizeView.m in Sources */,
 				8440B8C516DC801E006D58D4 /* SinaWeiboRequest.m in Sources */,
 				841848D216DDE65000471853 /* GPWeiboInfoViewController.m in Sources */,
+				843FD47C16E85DD9009FA8EF /* GPVideoViewController.m in Sources */,
+				84FE176516EDA2B0003841C3 /* GPWebViewController.m in Sources */,
+				84FE177016EDACC8003841C3 /* GPWebViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

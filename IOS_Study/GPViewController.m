@@ -11,6 +11,8 @@
 #import "GPGroupTableViewController.h"
 #import "GPHttpViewController.h"
 #import "GPSinaWeiboViewController.h"
+#import "GPVideoViewController.h"
+#import "GPWebViewController.h"
 
 @interface GPViewController ()
 
@@ -51,6 +53,15 @@
     GPSinaWeiboViewController *sinaWeiboController = [[GPSinaWeiboViewController alloc] init];
     sinaWeiboController.title = @"sina 微博";
     [array addObject:sinaWeiboController];
+    
+    GPVideoViewController *videoController = [[GPVideoViewController alloc] init];
+    videoController.title = @"视频播放";
+    [array addObject:videoController];
+    
+    
+    GPWebViewController *webViewController = [[GPWebViewController alloc] init];
+    webViewController.title = @"webView";
+    [array addObject:webViewController];
     
     self.controllers = array;
 }
