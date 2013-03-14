@@ -35,6 +35,8 @@
 		84B26E1416D5F509002D1792 /* GPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1316D5F509002D1792 /* GPViewController.m */; };
 		84B26E1716D5F8E8002D1792 /* GPStaticViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */; };
 		84B26E1A16D60AF7002D1792 /* GPGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */; };
+		84C34A1116F15DFF00AD442D /* GPJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C34A1016F15DFF00AD442D /* GPJsViewController.m */; };
+		84C34A2116F1767900AD442D /* GPJsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C34A2016F1767800AD442D /* GPJsPlugin.m */; };
 		84FE176516EDA2B0003841C3 /* GPWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FE176416EDA2B0003841C3 /* GPWebViewController.m */; };
 		84FE177016EDACC8003841C3 /* GPWebViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,10 @@
 		84B26E1616D5F8E8002D1792 /* GPStaticViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStaticViewController.m; sourceTree = "<group>"; };
 		84B26E1816D60AF7002D1792 /* GPGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGroupTableViewController.h; sourceTree = "<group>"; };
 		84B26E1916D60AF7002D1792 /* GPGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGroupTableViewController.m; sourceTree = "<group>"; };
+		84C34A0F16F15DFF00AD442D /* GPJsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPJsViewController.h; sourceTree = "<group>"; };
+		84C34A1016F15DFF00AD442D /* GPJsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPJsViewController.m; sourceTree = "<group>"; };
+		84C34A1F16F1767800AD442D /* GPJsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPJsPlugin.h; sourceTree = "<group>"; };
+		84C34A2016F1767800AD442D /* GPJsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPJsPlugin.m; sourceTree = "<group>"; };
 		84FE176316EDA2B0003841C3 /* GPWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewController.h; sourceTree = "<group>"; };
 		84FE176416EDA2B0003841C3 /* GPWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWebViewController.m; sourceTree = "<group>"; };
 		84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewDelegate.h; sourceTree = "<group>"; };
@@ -221,6 +227,10 @@
 				84FE176416EDA2B0003841C3 /* GPWebViewController.m */,
 				84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */,
 				84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */,
+				84C34A0F16F15DFF00AD442D /* GPJsViewController.h */,
+				84C34A1016F15DFF00AD442D /* GPJsViewController.m */,
+				84C34A1F16F1767800AD442D /* GPJsPlugin.h */,
+				84C34A2016F1767800AD442D /* GPJsPlugin.m */,
 			);
 			path = IOS_Study;
 			sourceTree = "<group>";
@@ -322,6 +332,8 @@
 				843FD47C16E85DD9009FA8EF /* GPVideoViewController.m in Sources */,
 				84FE176516EDA2B0003841C3 /* GPWebViewController.m in Sources */,
 				84FE177016EDACC8003841C3 /* GPWebViewDelegate.m in Sources */,
+				84C34A1116F15DFF00AD442D /* GPJsViewController.m in Sources */,
+				84C34A2116F1767900AD442D /* GPJsPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

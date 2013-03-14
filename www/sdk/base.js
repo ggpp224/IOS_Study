@@ -1826,14 +1826,12 @@ Ambow.getFormData = function(form){
 Ambow.Asyn = function(opt){
 	if(opt.isGet){
 		var params = opt.arg;
-		$.get(params[0],params[1],params[2],params[3]);	
-		return;
+		return $.get(params[0],params[1],params[2],params[3]);	
 	}else if(opt.isGetJson){
 		var params = opt.arg;
-		$.getJSON(params[0],params[1],params[2],params[3]);	
-		return;
+		return $.getJSON(params[0],params[1],params[2],params[3]);	
 	}
-	$.ajax(opt);
+	return $.ajax(opt);
 }
 
 /**
@@ -1861,7 +1859,7 @@ Ambow.post = function(opt){
  * @param {} opt
  */
 Ambow.ajax = function(opt){
-	Ambow.Asyn(opt);
+	return Ambow.Asyn(opt);
 }
 
 /**
@@ -1872,7 +1870,7 @@ Ambow.get = function(){
 		isGet:true,
 		arg:arguments
 	};
-	Ambow.Asyn(opt);
+	return Ambow.Asyn(opt);
 },
 
 /**
@@ -1883,6 +1881,6 @@ Ambow.getJSON = function(){
 		isGetJson:true,
 		arg:arguments
 	};
-	Ambow.Asyn(opt);
+	return Ambow.Asyn(opt);
 }
 Ambow.ns('App');

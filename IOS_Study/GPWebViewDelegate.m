@@ -7,6 +7,7 @@
 //
 
 #import "GPWebViewDelegate.h"
+#import "GPJsPlugin.h"
 
 @implementation GPWebViewDelegate
 @synthesize activityIndicator;
@@ -39,6 +40,36 @@
     [activityIndicator stopAnimating];
     UIView *maskView = (UIView *)[webView viewWithTag:108];
     [maskView removeFromSuperview];
+}
+
+- (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSString *urlString = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSRange range = [urlString rangeOfString:@"cmd:"];
+    if(range.length>0){
+        NSString *paramsStr = [urlString substringFromIndex:range.length];   
+        NSLog(paramsStr);
+        NSDictionary *params = [NSJSONSerialization JSONObjectWithData:[paramsStr dataUsingEncoding:NSUTF8StringEncoding]  options:kNilOptions error:nil]; 
+        NSString *className = [params objectForKey:@"class"];
+        NSString *methodName = [params objectForKey:@"method"];
+        NSDictionary *paramsDict = (NSDictionary *)[params objectForKey:@"params"];
+        
+        id PluginClass = NSClassFromString(className);
+        [PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict];
+        
+        NSLog(@"aa: %@",[params objectForKey:@"class"]);
+        return NO;
+    }
+    
+    
+   // NSArray *urlArr = [urlString componentsSeparatedByString:@":"];
+//    if([urlArr count]&&[[urlArr objectAtIndex:0] isEqualToString:@"cmd"]){
+//        NSString *functionString = [urlArr objectAtIndex:1];
+//     //   NSLog(functionString);
+//        
+////        return NO;
+//    }
+    
+    return YES;
 }
 
 @end
