@@ -47,16 +47,17 @@
     NSRange range = [urlString rangeOfString:@"cmd:"];
     if(range.length>0){
         NSString *paramsStr = [urlString substringFromIndex:range.length];   
-        NSLog(paramsStr);
         NSDictionary *params = [NSJSONSerialization JSONObjectWithData:[paramsStr dataUsingEncoding:NSUTF8StringEncoding]  options:kNilOptions error:nil]; 
         NSString *className = [params objectForKey:@"class"];
         NSString *methodName = [params objectForKey:@"method"];
         NSDictionary *paramsDict = (NSDictionary *)[params objectForKey:@"params"];
         
         id PluginClass = NSClassFromString(className);
-        [PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict];
+        NSLog(@"%@",paramsStr);
+        NSLog(@"%@",[paramsDict objectForKey:@"fn"]);
+        [PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict withObject:webView];
         
-        NSLog(@"aa: %@",[params objectForKey:@"class"]);
+        //NSLog(@"aa: %@",[params objectForKey:@"class"]);
         return NO;
     }
     

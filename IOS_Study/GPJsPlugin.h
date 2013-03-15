@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GPJsPlugin : NSObject
-+ (void) test:(NSDictionary *)param;
++ (void) test:(NSDictionary *)param :(UIWebView *)webview;
 @end

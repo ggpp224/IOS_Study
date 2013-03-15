@@ -9,7 +9,11 @@
 #import "GPJsPlugin.h"
 
 @implementation GPJsPlugin
-+ (void) test:(NSDictionary *)param{
-    NSLog(@"exec: %@ ",[param objectForKey:@"name"]);
++ (void) test:(NSDictionary *)param :(UIWebView *)webview{
+    NSLog(@"222");
+    NSString *aa = [param objectForKey:@"fn"];
+    NSLog(@"exec: %@,function: %@ ",[param objectForKey:@"name"],[param objectForKey:@"fn"]);
+    
+    [webview stringByEvaluatingJavaScriptFromString:[[NSString alloc] initWithFormat:@"(%@)()",[param objectForKey:@"fn"]]];
 }
 @end
