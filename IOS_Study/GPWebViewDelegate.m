@@ -43,7 +43,8 @@
 }
 
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    NSString *urlString = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *str = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlString = [str stringByReplacingOccurrencesOfString:@"/\"" withString:@"\\\""];
     NSRange range = [urlString rangeOfString:@"cmd:"];
     if(range.length>0){
         NSString *paramsStr = [urlString substringFromIndex:range.length];   
@@ -53,7 +54,6 @@
         NSDictionary *paramsDict = (NSDictionary *)[params objectForKey:@"params"];
         
         id PluginClass = NSClassFromString(className);
-        NSLog(@"%@",paramsStr);
         NSLog(@"%@",[paramsDict objectForKey:@"fn"]);
         [PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict withObject:webView];
         
