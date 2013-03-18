@@ -11,9 +11,11 @@
 @implementation GPJsPlugin
 + (void) test:(NSDictionary *)param :(UIWebView *)webview{
     NSLog(@"222");
-    NSString *aa = [param objectForKey:@"fn"];
-    NSLog(@"exec: %@,function: %@ ",[param objectForKey:@"name"],[param objectForKey:@"fn"]);
-    
-    [webview stringByEvaluatingJavaScriptFromString:[[NSString alloc] initWithFormat:@"(%@)()",[param objectForKey:@"fn"]]];
+  //  NSString *aa = [param objectForKey:@"fn"];
+    NSLog(@"exec:function: %@ ",[param objectForKey:@"fn"]);
+    NSString *fnParamsValueString = [[NSString alloc] initWithFormat:@";var %@ = {a:\"我是谁\"}",[param objectForKey:@"fnParamsName"]];
+    NSString *scriptString = [[NSString alloc] initWithFormat:@"(function(){%@;(%@)(%@)})()",fnParamsValueString,[param objectForKey:@"fn"],[param objectForKey:@"fnParamsName"]];
+    NSLog(scriptString);
+    [webview stringByEvaluatingJavaScriptFromString:scriptString];
 }
 @end

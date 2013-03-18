@@ -45,9 +45,10 @@
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSString *str = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *urlString = [str stringByReplacingOccurrencesOfString:@"/\"" withString:@"\\\""];
-    NSRange range = [urlString rangeOfString:@"cmd:"];
+    NSRange range = [urlString rangeOfString:@"gap:"];
     if(range.length>0){
         NSString *paramsStr = [urlString substringFromIndex:range.length];   
+        NSLog(paramsStr);
         NSDictionary *params = [NSJSONSerialization JSONObjectWithData:[paramsStr dataUsingEncoding:NSUTF8StringEncoding]  options:kNilOptions error:nil]; 
         NSString *className = [params objectForKey:@"class"];
         NSString *methodName = [params objectForKey:@"method"];
