@@ -170,6 +170,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8465209516F7F4B200CF8235 /* Webview */ = {
+			isa = PBXGroup;
+			children = (
+				84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */,
+				84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */,
+			);
+			name = Webview;
+			sourceTree = "<group>";
+		};
 		84B26DE816D5F2A7002D1792 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +213,7 @@
 		84B26DFD16D5F2A7002D1792 /* IOS_Study */ = {
 			isa = PBXGroup;
 			children = (
+				8465209516F7F4B200CF8235 /* Webview */,
 				8440B8B416DC801E006D58D4 /* sinaweibo_ios_sdk */,
 				8440B88016DB41C9006D58D4 /* GPHttp */,
 				84B26E0616D5F2A7002D1792 /* GPAppDelegate.h */,
@@ -225,8 +235,6 @@
 				843FD47B16E85DD9009FA8EF /* GPVideoViewController.m */,
 				84FE176316EDA2B0003841C3 /* GPWebViewController.h */,
 				84FE176416EDA2B0003841C3 /* GPWebViewController.m */,
-				84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */,
-				84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */,
 				84C34A0F16F15DFF00AD442D /* GPJsViewController.h */,
 				84C34A1016F15DFF00AD442D /* GPJsViewController.m */,
 				84C34A1F16F1767800AD442D /* GPJsPlugin.h */,
