@@ -8,7 +8,7 @@ function callPlugin(className,methodName,params,fn){
     params.fnParamsName=fnParamsName;
     var obj = {
         class:className,
-        method:methodName+"::",
+        method:methodName+":",
         params:params
     }
     
@@ -20,7 +20,7 @@ function callPlugin(className,methodName,params,fn){
 
 var host="http://10.10.6.45/";
 $('#btn').click(function(e){
-                callPlugin("GPJsPlugin","test",{},function(rs){alert(rs.a)});
+                callPlugin("GPTestJs","test",{},function(rs){alert(rs.a)});
  //location.href='cmd:{"class":"GPJsPlugin","method":"test::","params":{"fn":"function(){alert("222")}"}}';
 });
 Ambow.getJSON(host+"list.php",function(rs){

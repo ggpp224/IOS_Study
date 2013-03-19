@@ -8,6 +8,7 @@
 
 #import "GPWebViewDelegate.h"
 #import "GPJsPlugin.h"
+#import "GPWebViewGap.h"
 
 @implementation GPWebViewDelegate
 @synthesize activityIndicator;
@@ -54,22 +55,19 @@
         NSString *methodName = [params objectForKey:@"method"];
         NSDictionary *paramsDict = (NSDictionary *)[params objectForKey:@"params"];
         
-        id PluginClass = NSClassFromString(className);
-        NSLog(@"%@",[paramsDict objectForKey:@"fn"]);
-        [PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict withObject:webView];
+        //id PluginClass = NSClassFromString(className);
+        //[PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict withObject:webView];
+
         
-        //NSLog(@"aa: %@",[params objectForKey:@"class"]);
+        id plugin = [[NSClassFromString(className) alloc] initWith:webView];
+        SEL sel = NSSelectorFromString(methodName);
+        if([plugin respondsToSelector:sel]){
+            [plugin performSelector:sel withObject:paramsDict];
+        }
+           
         return NO;
     }
-    
-    
-   // NSArray *urlArr = [urlString componentsSeparatedByString:@":"];
-//    if([urlArr count]&&[[urlArr objectAtIndex:0] isEqualToString:@"cmd"]){
-//        NSString *functionString = [urlArr objectAtIndex:1];
-//     //   NSLog(functionString);
-//        
-////        return NO;
-//    }
+
     
     return YES;
 }

@@ -25,6 +25,8 @@
 		8440B8D116DC8D8C006D58D4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8440B8CB16DC8D8C006D58D4 /* logo.png */; };
 		8440B8D216DC8D8C006D58D4 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8440B8CC16DC8D8C006D58D4 /* logo@2x.png */; };
 		844F71E416D738EA00BBEFDD /* GPHttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F71E316D738EA00BBEFDD /* GPHttpViewController.m */; };
+		8465209C16F83BA900CF8235 /* GPTestJs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465209B16F83BA900CF8235 /* GPTestJs.m */; };
+		8465209F16F8692100CF8235 /* GPWebViewGap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465209E16F8692100CF8235 /* GPWebViewGap.m */; };
 		847B68BF16EEF0FE007376A9 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 847B68BE16EEF0FE007376A9 /* www */; };
 		84B26DF816D5F2A7002D1792 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF716D5F2A7002D1792 /* UIKit.framework */; };
 		84B26DFA16D5F2A7002D1792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF916D5F2A7002D1792 /* Foundation.framework */; };
@@ -71,6 +73,10 @@
 		8440B8CC16DC8D8C006D58D4 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		844F71E216D738EA00BBEFDD /* GPHttpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHttpViewController.h; sourceTree = "<group>"; };
 		844F71E316D738EA00BBEFDD /* GPHttpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHttpViewController.m; sourceTree = "<group>"; };
+		8465209A16F83BA900CF8235 /* GPTestJs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTestJs.h; sourceTree = "<group>"; };
+		8465209B16F83BA900CF8235 /* GPTestJs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTestJs.m; sourceTree = "<group>"; };
+		8465209D16F8692100CF8235 /* GPWebViewGap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewGap.h; sourceTree = "<group>"; };
+		8465209E16F8692100CF8235 /* GPWebViewGap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWebViewGap.m; sourceTree = "<group>"; };
 		847B68BE16EEF0FE007376A9 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		84B26DF316D5F2A7002D1792 /* IOS_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B26DF716D5F2A7002D1792 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -175,6 +181,8 @@
 			children = (
 				84FE176E16EDACC8003841C3 /* GPWebViewDelegate.h */,
 				84FE176F16EDACC8003841C3 /* GPWebViewDelegate.m */,
+				8465209D16F8692100CF8235 /* GPWebViewGap.h */,
+				8465209E16F8692100CF8235 /* GPWebViewGap.m */,
 			);
 			name = Webview;
 			sourceTree = "<group>";
@@ -239,6 +247,8 @@
 				84C34A1016F15DFF00AD442D /* GPJsViewController.m */,
 				84C34A1F16F1767800AD442D /* GPJsPlugin.h */,
 				84C34A2016F1767800AD442D /* GPJsPlugin.m */,
+				8465209A16F83BA900CF8235 /* GPTestJs.h */,
+				8465209B16F83BA900CF8235 /* GPTestJs.m */,
 			);
 			path = IOS_Study;
 			sourceTree = "<group>";
@@ -342,6 +352,8 @@
 				84FE177016EDACC8003841C3 /* GPWebViewDelegate.m in Sources */,
 				84C34A1116F15DFF00AD442D /* GPJsViewController.m in Sources */,
 				84C34A2116F1767900AD442D /* GPJsPlugin.m in Sources */,
+				8465209C16F83BA900CF8235 /* GPTestJs.m in Sources */,
+				8465209F16F8692100CF8235 /* GPWebViewGap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
