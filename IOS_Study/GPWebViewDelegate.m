@@ -7,7 +7,6 @@
 //
 
 #import "GPWebViewDelegate.h"
-#import "GPJsPlugin.h"
 #import "GPWebViewGap.h"
 
 @implementation GPWebViewDelegate
@@ -45,20 +44,15 @@
 
 - (BOOL) webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSString *str = [[[request URL] absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *urlString = [str stringByReplacingOccurrencesOfString:@"/\"" withString:@"\\\""];
-    NSRange range = [urlString rangeOfString:@"gap:"];
+    NSRange range = [str rangeOfString:@"gap:"];
     if(range.length>0){
+        NSString *urlString = [[str stringByReplacingOccurrencesOfString:@"/\"" withString:@"\\\""] stringByReplacingOccurrencesOfString:@"/n" withString:@""];  
         NSString *paramsStr = [urlString substringFromIndex:range.length];   
-        NSLog(paramsStr);
         NSDictionary *params = [NSJSONSerialization JSONObjectWithData:[paramsStr dataUsingEncoding:NSUTF8StringEncoding]  options:kNilOptions error:nil]; 
         NSString *className = [params objectForKey:@"class"];
         NSString *methodName = [params objectForKey:@"method"];
         NSDictionary *paramsDict = (NSDictionary *)[params objectForKey:@"params"];
-        
-        //id PluginClass = NSClassFromString(className);
-        //[PluginClass performSelector:NSSelectorFromString(methodName) withObject:paramsDict withObject:webView];
 
-        
         id plugin = [[NSClassFromString(className) alloc] initWith:webView];
         SEL sel = NSSelectorFromString(methodName);
         if([plugin respondsToSelector:sel]){

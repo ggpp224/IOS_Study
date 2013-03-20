@@ -13,4 +13,5 @@
 }
 //@property (strong,nonatomic) UIWebView *webview;
 - (GPWebViewGap *) initWith:(UIWebView *) myWebview;
+- (void) writeJavascriptWithParams:(NSDictionary *) params response:(NSDictionary *) response;
 @end

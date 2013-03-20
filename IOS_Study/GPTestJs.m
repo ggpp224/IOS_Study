@@ -9,18 +9,16 @@
 #import "GPTestJs.h"
 
 @implementation GPTestJs
-
-
-
-
 - (void) test:(NSDictionary *)param{
-   //
-    NSLog(@"exec:function: %@ ",[param objectForKey:@"fn"]);
-    NSString *fnParamsValueString = [[NSString alloc] initWithFormat:@";var %@ = {a:\"我是谁\"}",[param objectForKey:@"fnParamsName"]];
-    NSString *scriptString = [[NSString alloc] initWithFormat:@"(function(){%@;(%@)(%@)})()",fnParamsValueString,[param objectForKey:@"fn"],[param objectForKey:@"fnParamsName"]];
-    NSLog(scriptString);
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"我是谁啊",@"a",@"eers",@"b",nil];
+    [self writeJavascriptWithParams:param response:dict];
+    NSLog(@"execed");
+}
+
+- (void) alert:(NSDictionary *)param{
     
-    [webview stringByEvaluatingJavaScriptFromString:scriptString];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[param objectForKey:@"title"] message:[param objectForKey:@"msg"] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
 }
 
 @end

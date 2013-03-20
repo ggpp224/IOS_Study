@@ -17,4 +17,13 @@
     }
     return self;
 }
+
+- (void) writeJavascriptWithParams:(NSDictionary *) params response:(NSDictionary *) response{
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:response options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    NSString *fnParamsValueString = [[NSString alloc] initWithFormat:@";var %@ = %@",[params objectForKey:@"fnParamsName"],jsonString];
+    NSString *scriptString = [[NSString alloc] initWithFormat:@"(function(){%@;(%@)(%@)})()",fnParamsValueString,[params objectForKey:@"fn"],[params objectForKey:@"fnParamsName"]];
+    
+    [webview stringByEvaluatingJavaScriptFromString:scriptString];
+}
 @end
