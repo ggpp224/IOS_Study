@@ -12,4 +12,5 @@
 @interface GPTestJs : GPWebViewGap
 - (void) test:(NSDictionary *)param;
 - (void) alert:(NSDictionary *)param;
+- (void) console:(NSDictionary *)param;
 @end

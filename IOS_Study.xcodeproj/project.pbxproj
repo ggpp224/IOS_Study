@@ -27,6 +27,12 @@
 		844F71E416D738EA00BBEFDD /* GPHttpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F71E316D738EA00BBEFDD /* GPHttpViewController.m */; };
 		8465209C16F83BA900CF8235 /* GPTestJs.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465209B16F83BA900CF8235 /* GPTestJs.m */; };
 		8465209F16F8692100CF8235 /* GPWebViewGap.m in Sources */ = {isa = PBXBuildFile; fileRef = 8465209E16F8692100CF8235 /* GPWebViewGap.m */; };
+		846520A616FAD12000CF8235 /* GPTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846520A516FAD12000CF8235 /* GPTabBarViewController.m */; };
+		846520AB16FAD2E100CF8235 /* GPFirstTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846520AA16FAD2E100CF8235 /* GPFirstTabBarViewController.m */; };
+		846520AE16FAD2FF00CF8235 /* GPSecondTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846520AD16FAD2FF00CF8235 /* GPSecondTabBarViewController.m */; };
+		846520B116FB03E900CF8235 /* GPSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846520B016FB03E900CF8235 /* GPSocketViewController.m */; };
+		846520B816FB08A300CF8235 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846520B716FB08A300CF8235 /* CFNetwork.framework */; };
+		846520B916FB108F00CF8235 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 846520B416FB07F400CF8235 /* AsyncSocket.m */; };
 		847B68BF16EEF0FE007376A9 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 847B68BE16EEF0FE007376A9 /* www */; };
 		84B26DF816D5F2A7002D1792 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF716D5F2A7002D1792 /* UIKit.framework */; };
 		84B26DFA16D5F2A7002D1792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B26DF916D5F2A7002D1792 /* Foundation.framework */; };
@@ -76,6 +82,19 @@
 		8465209B16F83BA900CF8235 /* GPTestJs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTestJs.m; sourceTree = "<group>"; };
 		8465209D16F8692100CF8235 /* GPWebViewGap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPWebViewGap.h; sourceTree = "<group>"; };
 		8465209E16F8692100CF8235 /* GPWebViewGap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPWebViewGap.m; sourceTree = "<group>"; };
+		846520A416FAD12000CF8235 /* GPTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTabBarViewController.h; sourceTree = "<group>"; };
+		846520A516FAD12000CF8235 /* GPTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTabBarViewController.m; sourceTree = "<group>"; };
+		846520A916FAD2E100CF8235 /* GPFirstTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPFirstTabBarViewController.h; sourceTree = "<group>"; };
+		846520AA16FAD2E100CF8235 /* GPFirstTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPFirstTabBarViewController.m; sourceTree = "<group>"; };
+		846520AC16FAD2FF00CF8235 /* GPSecondTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSecondTabBarViewController.h; sourceTree = "<group>"; };
+		846520AD16FAD2FF00CF8235 /* GPSecondTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSecondTabBarViewController.m; sourceTree = "<group>"; };
+		846520AF16FB03E900CF8235 /* GPSocketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSocketViewController.h; sourceTree = "<group>"; };
+		846520B016FB03E900CF8235 /* GPSocketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSocketViewController.m; sourceTree = "<group>"; };
+		846520B316FB07F400CF8235 /* AsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		846520B416FB07F400CF8235 /* AsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		846520B516FB07F400CF8235 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		846520B616FB07F400CF8235 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		846520B716FB08A300CF8235 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		847B68BE16EEF0FE007376A9 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		84B26DF316D5F2A7002D1792 /* IOS_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B26DF716D5F2A7002D1792 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846520B816FB08A300CF8235 /* CFNetwork.framework in Frameworks */,
 				843FD48016E85F2B009FA8EF /* MediaPlayer.framework in Frameworks */,
 				843FD47E16E85F17009FA8EF /* AVFoundation.framework in Frameworks */,
 				84B26DF816D5F2A7002D1792 /* UIKit.framework in Frameworks */,
@@ -184,9 +204,34 @@
 			name = Webview;
 			sourceTree = "<group>";
 		};
+		846520A816FAD29B00CF8235 /* GPTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				846520A416FAD12000CF8235 /* GPTabBarViewController.h */,
+				846520A516FAD12000CF8235 /* GPTabBarViewController.m */,
+				846520A916FAD2E100CF8235 /* GPFirstTabBarViewController.h */,
+				846520AA16FAD2E100CF8235 /* GPFirstTabBarViewController.m */,
+				846520AC16FAD2FF00CF8235 /* GPSecondTabBarViewController.h */,
+				846520AD16FAD2FF00CF8235 /* GPSecondTabBarViewController.m */,
+			);
+			name = GPTabBarView;
+			sourceTree = "<group>";
+		};
+		846520B216FB07CB00CF8235 /* ASyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				846520B316FB07F400CF8235 /* AsyncSocket.h */,
+				846520B416FB07F400CF8235 /* AsyncSocket.m */,
+				846520B516FB07F400CF8235 /* AsyncUdpSocket.h */,
+				846520B616FB07F400CF8235 /* AsyncUdpSocket.m */,
+			);
+			name = ASyncSocket;
+			sourceTree = "<group>";
+		};
 		84B26DE816D5F2A7002D1792 = {
 			isa = PBXGroup;
 			children = (
+				846520B716FB08A300CF8235 /* CFNetwork.framework */,
 				847B68BE16EEF0FE007376A9 /* www */,
 				8440B8C616DC8D8C006D58D4 /* Resources */,
 				84B26DFD16D5F2A7002D1792 /* IOS_Study */,
@@ -218,6 +263,8 @@
 		84B26DFD16D5F2A7002D1792 /* IOS_Study */ = {
 			isa = PBXGroup;
 			children = (
+				846520B216FB07CB00CF8235 /* ASyncSocket */,
+				846520A816FAD29B00CF8235 /* GPTabBarView */,
 				8465209516F7F4B200CF8235 /* Webview */,
 				8440B8B416DC801E006D58D4 /* sinaweibo_ios_sdk */,
 				8440B88016DB41C9006D58D4 /* GPHttp */,
@@ -244,6 +291,8 @@
 				84C34A1016F15DFF00AD442D /* GPJsViewController.m */,
 				8465209A16F83BA900CF8235 /* GPTestJs.h */,
 				8465209B16F83BA900CF8235 /* GPTestJs.m */,
+				846520AF16FB03E900CF8235 /* GPSocketViewController.h */,
+				846520B016FB03E900CF8235 /* GPSocketViewController.m */,
 			);
 			path = IOS_Study;
 			sourceTree = "<group>";
@@ -329,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846520B916FB108F00CF8235 /* AsyncSocket.m in Sources */,
 				84B26E0416D5F2A7002D1792 /* main.m in Sources */,
 				84B26E0816D5F2A7002D1792 /* GPAppDelegate.m in Sources */,
 				84B26E1416D5F509002D1792 /* GPViewController.m in Sources */,
@@ -348,6 +398,10 @@
 				84C34A1116F15DFF00AD442D /* GPJsViewController.m in Sources */,
 				8465209C16F83BA900CF8235 /* GPTestJs.m in Sources */,
 				8465209F16F8692100CF8235 /* GPWebViewGap.m in Sources */,
+				846520A616FAD12000CF8235 /* GPTabBarViewController.m in Sources */,
+				846520AB16FAD2E100CF8235 /* GPFirstTabBarViewController.m in Sources */,
+				846520AE16FAD2FF00CF8235 /* GPSecondTabBarViewController.m in Sources */,
+				846520B116FB03E900CF8235 /* GPSocketViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

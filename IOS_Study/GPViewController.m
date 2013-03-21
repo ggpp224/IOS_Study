@@ -13,6 +13,8 @@
 #import "GPSinaWeiboViewController.h"
 #import "GPVideoViewController.h"
 #import "GPWebViewController.h"
+#import "GPTabBarViewController.h"
+#import "GPSocketViewController.h"
 
 @interface GPViewController ()
 
@@ -62,6 +64,14 @@
     GPWebViewController *webViewController = [[GPWebViewController alloc] init];
     webViewController.title = @"webView";
     [array addObject:webViewController];
+    
+    GPTabBarViewController *tabBarController = [[GPTabBarViewController alloc] init];
+    tabBarController.title = @"tabBar";
+    [array addObject:tabBarController];
+    
+    GPSocketViewController *socketController = [[GPSocketViewController alloc] init];
+    socketController.title = @"socket";
+    [array addObject:socketController];
     
     self.controllers = array;
 }

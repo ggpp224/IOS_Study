@@ -2,6 +2,7 @@
 var host="http://10.10.6.45/";
 $('#btn').click(function(e){
     WebGap.exec("GPTestJs","test",{canshu:"333"},function(rs){
+                alert("我是web对话框");
                 WebGap.exec("GPTestJs","alert",{title:"提示",msg:rs.a});
     });
                 

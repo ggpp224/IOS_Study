@@ -23,3 +23,7 @@ var WebGap={
         location.href='gap:'+paramsStr;
     }
 }
+
+console.log(msg){
+    WebGap.exec("GPTestJs","console",{msg:msg});
+}

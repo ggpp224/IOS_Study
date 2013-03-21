@@ -10,7 +10,7 @@
 
 @implementation GPTestJs
 - (void) test:(NSDictionary *)param{
-    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"我是谁啊",@"a",@"eers",@"b",nil];
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:@"我是系统对话框",@"a",@"eers",@"b",nil];
     [self writeJavascriptWithParams:param response:dict];
     NSLog(@"execed");
 }
@@ -21,4 +21,7 @@
     [alert show];
 }
 
+- (void) console:(NSDictionary *)param{
+    //NSLog(@"")
+}
 @end
