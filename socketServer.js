@@ -11,7 +11,9 @@ var server = net.createServer(function(socket){
     socket.on('data',function(data){
 
         console.log('recv:' + data);
-
+		socket.write('hello\r\n');
+		console.log('back..');
+  		//socket.pipe(socket);
     });
 
     //数据错误事件

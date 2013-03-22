@@ -8,6 +8,8 @@
 
 #import "GPSocketViewController.h"
 
+#define HOST @"10.10.12.78"
+#define PORT 7003
 
 @interface GPSocketViewController (){
     
@@ -40,12 +42,31 @@
 }
 
 -(void) buttonPressed:(UIButton *)sender{
-    NSLog(@"ssss");
     asyncSocket = [[AsyncSocket alloc] initWithDelegate:self];
     NSError *err = nil;
-    if(![asyncSocket connectToHost:@"10.10.12.78" onPort:7003 error:&err]){
+    if(![asyncSocket connectToHost:HOST onPort:PORT error:&err]){
         NSLog(@"connect err");
     }
+    NSData* aData= [@"test data" dataUsingEncoding: NSUTF8StringEncoding];
+    //连接成功后需手动调用一下readDataWithTimeout
+    [asyncSocket readDataWithTimeout:-1 tag:0];
+    
+    [asyncSocket writeData:aData withTimeout:-1 tag:1];
+    
+    NSLog(@"ssss");
+}
+
+
+-(void) onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag{
+    
+    NSLog(@"thread(%),onSocket:%p didWriteDataWithTag:%ld",[[NSThread currentThread] name],sock,tag); 
+}
+
+
+- (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
+    NSString* aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"Hava received datas is :%@",aStr);
+
 }
 
 - (void)viewDidUnload
