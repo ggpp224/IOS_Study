@@ -14,3 +14,4 @@ WebGap.exec("GPTestJs","test",{canshu:"333"},function(rs){
     });
 </pre>
 
+调用GPTestJs类下实例方法test,参数是333, 等价于[[[GPTestJs alloc] init] test :333]; 调用成功后继续调用GPTestJs类下alert方法。 
